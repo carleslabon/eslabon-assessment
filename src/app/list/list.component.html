@@ -1,0 +1,28 @@
+<div class="container">
+        <div class="row">
+            <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email Address</th>
+                    <th class="text-center">Contact No.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of _usersArray; let x = index">
+                    <td class="text-center">{{user.id}}</td>
+                    <td class="text-center">{{user.name}}</td>
+                    <td class="text-center">{{user.email}}</td>
+                    <td class="text-center">{{user.phone}}</td>
+                    <td class="btn-toolbar">
+                        <button class="btn btn-primary" (click)="onEdit(user)">Edit</button>
+                        <button class="btn btn-danger" (click)="onDelete(x)">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+      </div> 
+
+      
